@@ -8,18 +8,12 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "format": "prettier --write ."
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "format": "prettier --write .",
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,css}": [
-      "eslint --fix",
-      "prettier --write"
-    ]
+    "*.{js,jsx,ts,tsx,css}": "prettier --write"
   },
   "dependencies": {
     "react": "^18.3.1",
